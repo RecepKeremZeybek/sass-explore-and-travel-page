@@ -1,71 +1,23 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-@import url("https://fonts.googleapis.com/css2?family=Inter&family=Mulish&family=Playfair+Display&family=Rampart+One&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Error: Only 0 arguments allowed, but 3 were passed.
+ *    ,--> scss\sections\_home.scss
+ * 17 |       @include bgImage(500px, 45%, "../assets/image1.png");
+ *    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+ *    '
+ *    ,--> scss\abstracts\_mixins.scss
+ * 15 |   @mixin bgImage(){
+ *    |          ========= declaration
+ *    '
+ *   scss\sections\_home.scss 17:7  bgImage()
+ *   scss\sections\_home.scss 17:7  @import
+ *   scss\main.scss 12:9            root stylesheet */
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 6rem;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Only 0 arguments allowed, but 3 were passed.\a    \250c \2500 \2500 > scss\\sections\\_home.scss\a 17 \2502        @include bgImage(500px, 45%, "../assets/image1.png");\d\a    \2502        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss\\abstracts\\_mixins.scss\a 15 \2502    @mixin bgImage(){\d\a    \2502           \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss\\sections\\_home.scss 17:7  bgImage()\a   scss\\sections\\_home.scss 17:7  @import\a   scss\\main.scss 12:9            root stylesheet';
 }
-.header i {
-  display: none;
-}
-.header__logo {
-  width: 50px;
-  height: 50px;
-}
-.header__links {
-  display: flex;
-  align-items: center;
-  list-style-type: none;
-}
-.header__links li {
-  padding-right: 0.5rem;
-}
-.header__links--home, .header__links--disabled {
-  color: #202336;
-  border: none;
-  background-color: #fff;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 19px;
-}
-.header__links--disabled {
-  color: #b8becd;
-  font-weight: 400;
-}
-.header__links--login, .header__links--register {
-  background-color: #fff;
-  border: 1px solid #fb8f1d;
-  border-radius: 8px;
-  font-family: Inter;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 30px;
-  color: #fb8f1d;
-  width: 90px;
-}
-.header__links--register {
-  border: none;
-  background-color: #fb8f1d;
-  color: #fff;
-}
-
-body {
-  background-color: #fff;
-  position: relative;
-}
-
-button, i {
-  cursor: pointer;
-}
-
-/*# sourceMappingURL=style.css.map */
