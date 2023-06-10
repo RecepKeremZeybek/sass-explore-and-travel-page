@@ -1,14 +1,9 @@
-/* Error: Only 0 arguments allowed, but 3 were passed.
- *    ,--> scss\sections\_home.scss
- * 17 |       @include bgImage(500px, 45%, "../assets/image1.png");
- *    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation
+/* Error: Undefined mixin.
+ *    ,
+ * 61 |         @include btnMix(90px);
+ *    |         ^^^^^^^^^^^^^^^^^^^^^
  *    '
- *    ,--> scss\abstracts\_mixins.scss
- * 15 |   @mixin bgImage(){
- *    |          ========= declaration
- *    '
- *   scss\sections\_home.scss 17:7  bgImage()
- *   scss\sections\_home.scss 17:7  @import
+ *   scss\sections\_home.scss 61:9  @import
  *   scss\main.scss 12:9            root stylesheet */
 
 body::before {
@@ -19,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: Only 0 arguments allowed, but 3 were passed.\a    \250c \2500 \2500 > scss\\sections\\_home.scss\a 17 \2502        @include bgImage(500px, 45%, "../assets/image1.png");\d\a    \2502        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ invocation\a    \2575 \a    \250c \2500 \2500 > scss\\abstracts\\_mixins.scss\a 15 \2502    @mixin bgImage(){\d\a    \2502           \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a    \2575 \a   scss\\sections\\_home.scss 17:7  bgImage()\a   scss\\sections\\_home.scss 17:7  @import\a   scss\\main.scss 12:9            root stylesheet';
+  content: "Error: Undefined mixin.\a    \2577 \a 61 \2502          @include btnMix(90px);\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss\\sections\\_home.scss 61:9  @import\a   scss\\main.scss 12:9            root stylesheet";
 }

@@ -12,9 +12,9 @@
     line-height: $height;
   }
   
-  @mixin bgImage(){
-    height: 500px;
-    width: 45%;
+  @mixin bgImage($height,$width,$url){
+    height: $height;
+    width: $width;
     background-position: center center;
     background-size: contain;
     background-repeat: no-repeat;
