@@ -1,0 +1,13 @@
+// main
+
+@import "./base/reset";
+
+@import "./abstracts/variables", "./abstracts/mixins";
+//değişkenler ve fonksiyonlar
+
+// import sırası önemlidir ortak olan dosyalara her yerden erişim sağlayabilmemiz için öncelikle ortak dosyaları import etmemiz gerekiyor
+
+@import "./components/footer", "./components/navbar", "./components/responsive";
+
+@import "./sections/home", "./sections/about", "./sections/destination",
+  "./sections/guide";
